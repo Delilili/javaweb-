@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>滑动拼图验证码</title>
+    <link rel="stylesheet" href="./static/verify-master/css/verify.css">
+    <link rel="stylesheet" href="/static/bootstrap-3.4.1-dist/css/bootstrap.css">
+</head>
+<body>
+
+
+<!-- Button trigger modal -->
+<button type="button" id="btnAdd" class="btn btn-primary btn-lg">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel-body">
+                    <div id="mpanel4" style="margin-top:50px;">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取 消</button>
+                <button id="btnSave" type="button" class="btn btn-primary">保 存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+<script src="/static/jquery-3.5.1/jquery-3.5.1.js"></script>
+<script src="/static/bootstrap-3.4.1-dist/js/bootstrap.js"></script>
+<script src="/static/verify-master/js/verify.js"></script>
+
+<script>
+    $("#btnAdd").click(function () {
+        $('#myModal').modal('show');
+    });
+
+    $('#mpanel4').slideVerify({
+        type: 2,		//类型
+        vOffset: 5,	//误差量，根据需求自行调整
+        vSpace: 5,	//间隔
+        imgUrl: "./img/",
+        imgName: ['waoku.jpg', 'wuwu.jpeg',],
+        imgSize: {
+            width: '400px',
+            height: '200px',
+        },
+        blockSize: {
+            width: '40px',
+            height: '40px',
+        },
+        barSize: {
+            width: '400px',
+            height: '40px',
+        },
+        ready: function () {
+        },
+        success: function () {
+            alert('验证成功，添加你自己的代码！');
+            //......后续操作
+        },
+        error: function () {
+            alert('验证失败！');
+        }
+
+    });
+
+
+</script>
+</html>

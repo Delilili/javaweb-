@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入css文件 -->
+    <link rel="stylesheet" href="./login.css">
+    <!-- 引入jquery -->
+    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+    <!-- 引入滑块验证码与bootstrap -->
+    <link rel="stylesheet" href="./static/verify-master/css/verify.css">
+    <link rel="stylesheet" href="/static/bootstrap-3.4.1-dist/css/bootstrap.css">
+    <title>登录</title>
+</head>
+
+<body>
+    <!-- 最外层的大盒子 -->
+    <div class="box">
+        <!-- 滑动盒子 -->
+        <div class="pre-box">
+            <h1>WELCOME</h1>
+            <p>JOIN US!</p>
+            <div class="img-box">
+                <img src="./img/waoku.jpg" alt="">
+            </div>
+        </div>
+        <!-- 注册盒子 -->
+        <div class="register-form">
+            <!-- 标题盒子 -->
+            <div class="title-box">
+                <h1>注册</h1>
+            </div>
+            <!-- 输入框盒子 -->
+            <form action="">
+                <div class="input-box">
+                    <input type="text" placeholder="用户名">
+                    <input type="password" placeholder="密码">
+                    <input type="password" placeholder="确认密码">
+                </div>
+                <!-- 按钮盒子 -->
+                <div class="btn-box">
+                    <button>注册</button>
+                    <!-- 绑定点击事件 -->
+                    <p onclick="mySwitch()">已有账号?去登录</p>
+                </div>
+            </form>
+
+        </div>
+        <!-- 登录盒子 -->
+        <div class="login-form">
+            <!-- 标题盒子 -->
+            <div class="title-box">
+                <h1>登录</h1>
+            </div>
+            <!-- 输入框盒子 -->
+            <form action="">
+                <div class="input-box">
+                    <input type="text" placeholder="用户名">
+                    <input type="password" placeholder="密码">
+                </div>
+                <!-- 按钮盒子 -->
+                <div class="btn-box">
+                    <button type="button" id="btnAdd" >登录</button>
+                    <!-- 绑定点击事件 -->
+                    <p onclick="mySwitch()">没有账号?去注册</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 滑块验证码 -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel-body">
+                        <div id="mpanel4" style="margin-top:50px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取 消</button>
+                    <button id="btnSave" type="button" class="btn btn-primary">保 存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加滑动验证码的模块 -->
+    <script src="/static/jquery-3.5.1/jquery-3.5.1.js"></script>
+    <script src="/static/bootstrap-3.4.1-dist/js/bootstrap.js"></script>
+    <script src="/static/verify-master/js/verify.js"></script>
+    <script>
+        $("#btnAdd").click(function () {
+            $('#myModal').modal('show');
+        });
+
+        $('#mpanel4').slideVerify({
+            type: 2,		//类型
+            vOffset: 5,	//误差量，根据需求自行调整
+            vSpace: 5,	//间隔
+            imgUrl: "./static/verify-master/images/",
+            imgName: ['1.jpg', '2.jpg',],
+            imgSize: {
+                width: '400px',
+                height: '200px',
+            },
+            blockSize: {
+                width: '40px',
+                height: '40px',
+            },
+            barSize: {
+                width: '400px',
+                height: '40px',
+            },
+            ready: function () {
+            },
+            success: function () {
+                alert('验证成功，添加你自己的代码！');
+                //......后续操作
+            },
+            error: function () {
+                alert('验证失败！');
+            }
+
+        });
+
+
+    </script>
+
+    <!-- 下面是页面的JS代码 -->
+    <script>
+        // 滑动的状态
+        let flag = true
+        const mySwitch = () => {
+            if (flag) {
+                // 获取到滑动盒子的dom元素并修改它移动的位置
+                $(".pre-box").css("transform", "translateX(100%)")
+                // 获取到滑动盒子的dom元素并修改它的背景颜色
+                $(".pre-box").css("background-color", "#c9e0ed")
+                //修改图片的路径
+                $("img").attr("src", "./img/wuwu.jpeg")
+
+            }
+            else {
+                $(".pre-box").css("transform", "translateX(0%)")
+                $(".pre-box").css("background-color", "#edd4dc")
+                $("img").attr("src", "./img/waoku.jpg")
+            }
+            flag = !flag
+        }
+    </script>
+    <!-- <script>
+        const bubleCreate = () => {
+            // 获取body元素
+            const body = document.body
+            // 创建泡泡元素
+            const buble = document.createElement('span')
+            // 设置泡泡半径
+            let r = Math.random() * 5 + 25 //半径大小为25~30
+            // 设置泡泡的宽高
+            buble.style.width = r + 'px'
+            buble.style.height = r + 'px'
+            // 设置泡泡的随机起点
+            buble.style.left = Math.random() * innerWidth + 'px'
+            // 为body添加buble元素
+            body.append(buble)
+            // 4s清除一次泡泡
+            setTimeout(() => {
+                buble.remove()
+            }, 4000)
+        }
+        // 每200ms生成一个泡泡
+        setInterval(() => {
+            bubleCreate()
+        }, 200);
+    </script> -->
+</body>
+
+</html>
