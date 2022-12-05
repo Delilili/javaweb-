@@ -128,8 +128,72 @@ a:visited{
 }
 
 /* 设置轮播图容器 */
-.out-wrapper .scroll-wrapper{
+.swiper{
     width: 1200px;
     height: 400px;
     background-color: #a6c1ee;
+}
+.swiper-slide{
+    position: absolute;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+/* 设置轮播图下方的文字信息 */
+.swiper-slide .remark{
+    position: relative;
+    left: 100px;
+    top: -20px;
+    color: aliceblue;
+    font-size: 14px;
+}
+.swiper-slide .comicName{
+    height: 30px;
+    width: 200px;
+    position: relative;
+    top: 10px;
+    color: #FFFFF2;
+    font-size: 20px;
+}
+.swiper-slide .description{
+    height: 30px;
+    width: 200px;
+    position: relative;
+    top: 20px;
+    color: #928E90;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+/* 设置主容器 */
+.main-wrapper{
+    width: 1200px;
+    height: 100%;
+    margin-top: 20px;
+}
+/* 最近更新 */
+.main-wrapper .latest{
+    width: 1200px;
+    height: 400px;
+}
+.latest .title{
+    width: 1200px;
+    height: 50px;
+}
+.latest .list{
+    width: 1200px;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+}
+.latest .list .imgList{
+    width: 200px;
+    height: 300px;
+    padding: 0 10px;
+}
+.latest .imgList img{
+    width: 180px;
+    height: 300px;
 }
