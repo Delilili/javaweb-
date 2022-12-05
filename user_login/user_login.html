@@ -10,8 +10,8 @@
     <!-- 引入jquery -->
     <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
     <!-- 引入滑块验证码与bootstrap -->
-    <link rel="stylesheet" href="./static/verify-master/css/verify.css">
-    <link rel="stylesheet" href="/static/bootstrap-3.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/verify-master/css/verify.css">
+    <link rel="stylesheet" href="../static/bootstrap-3.4.1-dist/css/bootstrap.css">
     <title>登录</title>
 </head>
 
@@ -23,7 +23,7 @@
             <h1>WELCOME</h1>
             <p>JOIN US!</p>
             <div class="img-box">
-                <img src="./img/waoku.jpg" alt="">
+                <img src="../img/waoku.jpg" alt="">
             </div>
         </div>
         <!-- 注册盒子 -->
@@ -95,9 +95,9 @@
     </div>
 
     <!-- 添加滑动验证码的模块 -->
-    <script src="/static/jquery-3.5.1/jquery-3.5.1.js"></script>
-    <script src="/static/bootstrap-3.4.1-dist/js/bootstrap.js"></script>
-    <script src="/static/verify-master/js/verify.js"></script>
+    <script src="../static/jquery-3.5.1/jquery-3.5.1.js"></script>
+    <script src="../static/bootstrap-3.4.1-dist/js/bootstrap.js"></script>
+    <script src="../static/verify-master/js/verify.js"></script>
     <script>
         $("#btnAdd").click(function () {
             $('#myModal').modal('show');
@@ -107,7 +107,7 @@
             type: 2,		//类型
             vOffset: 5,	//误差量，根据需求自行调整
             vSpace: 5,	//间隔
-            imgUrl: "./static/verify-master/images/",
+            imgUrl: "../static/verify-master/images/",
             imgName: ['1.jpg', '2.jpg',],
             imgSize: {
                 width: '400px',
