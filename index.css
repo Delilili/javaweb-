@@ -178,22 +178,51 @@ a:visited{
     width: 1200px;
     height: 400px;
 }
+/* 最新更新-标题 */
 .latest .title{
     width: 1200px;
     height: 50px;
 }
+/* 最新更新-图片列表 */
 .latest .list{
     width: 1200px;
     height: 350px;
     display: flex;
     justify-content: space-around;
 }
-.latest .list .imgList{
+/* 设置图片容器 */
+.latest .list li .imgList{
     width: 200px;
     height: 300px;
     padding: 0 10px;
 }
+/* 设置图片下方内容 */
 .latest .imgList img{
     width: 180px;
     height: 300px;
+}
+/* .latest .list li{
+    position: absolute;
+} */
+.list li .remark{
+    position: relative;
+    left: 100px;
+    top: -18px;
+    color: aliceblue;
+    font-size: 14px;
+}
+.list li .comicName{
+    position: relative;
+    left: 10px;
+    color: #a6c1ee;
+    font-size: 20px;
+}
+.list li .description{
+    width: 220px;
+    height: 14px;
+    position: relative;
+    left: 10px;
+    color: #928E90;
+    font-size: 14px;
+    overflow: hidden;
 }

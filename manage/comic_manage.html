@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>管理系统首页</title>
+    <title>用户管理</title>
     <link rel="stylesheet" href="../static/bootstrap-3.4.1-dist/css/bootstrap.css">
     <!-- 引入图标字体 -->
     <link rel="stylesheet" href="../static/font/iconfont.css">
@@ -23,7 +23,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="javascript:;">动漫管理系统</a>
+                <a class="navbar-brand" href="./manage.html">动漫管理系统</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,10 +55,78 @@
         </div><!-- /.container-fluid -->
     </nav>
 
+    <!-- 面板 -->
     <div class="panel panel-default">
-        <div class="panel-heading">Panel heading without title</div>
+        <div class="panel-heading">
+            <span class="iconfont icon-liebiao"></span>
+            用户列表&nbsp;&nbsp;&nbsp;
+            <button id="btnAdd" class="btn btn-success"><span class="iconfont icon-xinjian"></span>新建</button>
+        </div>
+
         <div class="panel-body">
-            Panel content
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>用户名</th>
+                        <th>密码</th>
+                        <th>头像</th>
+                        <th>邮箱</th>
+                        <th>手机号</th>
+                        <th>创建时间</th>
+                        <th>历史观看</th>
+                        <th>收藏动漫</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>
+                            <button id="btnEdit" class="btn btn-warning"><span class="iconfont icon-xiugai"></span>修改</button>
+                            <button id="btnDelete" class="btn btn-danger"><span class="iconfont icon-shanchu"></span>删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>@fat</td>
+                        <td>@fat</td>
+                        <td>@fat</td>
+                        <td>@fat</td>
+                        <td>@fat</td>
+                        <td>
+                            <button id="btnEdit" class="btn btn-warning"><span class="iconfont icon-xiugai"></span>修改</button>
+                            <button id="btnDelete" class="btn btn-danger"><span class="iconfont icon-shanchu"></span>删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                        <td>
+                            <button id="btnEdit" class="btn btn-warning"><span class="iconfont icon-xiugai"></span>修改</button>
+                            <button id="btnDelete" class="btn btn-danger"><span class="iconfont icon-shanchu"></span>删除</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 

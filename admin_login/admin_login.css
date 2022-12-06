@@ -17,13 +17,37 @@ body{
     /* 相对定位 */
     position: relative;
     width: 320px;
+    top: -70px;
 }
 .input-box{
     /* 弹性布局 垂直排列 */
     display: flex;
     flex-direction: column;
+    position: absolute;
 }
-.input-box input{
+.input-box #adminName,
+.input-box #password{
+    height: 40px;
+    width: 320px;
+    border-radius: 3px;
+    /* 缩进15像素 */
+    text-indent: 15px;
+    outline: none;
+    border: none;
+    margin-bottom: 15px;
+}
+/* 聚焦时增加边框 */
+.input-box input:focus{
+    outline: 1px solid lightseagreen;
+}
+/* 聚焦时隐藏文字 */
+input:focus::placeholder {
+    opacity: 0;
+}
+
+/* 设置验证码输入框和验证码图片 */
+.input-box #validCode{
+    width: 160px;
     height: 40px;
     border-radius: 3px;
     /* 缩进15像素 */
@@ -32,9 +56,19 @@ body{
     border: none;
     margin-bottom: 15px;
 }
-.input-box input:focus{
-    outline: 1px solid lightseagreen;
+.input-box #validImg{
+    cursor: pointer;
+    width: 160px;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 15px;
+    position: relative;
+    left: 160px;
+    top: -55px;
 }
+
+/* 登录按钮 */
 .input-box button{
     border: none;
     height: 45px;
@@ -42,6 +76,8 @@ body{
     color: #fff;
     border-radius: 3px;
     cursor: pointer;
+    position: relative;
+    top: -40px;
 }
 /* 接下来是猫头鹰的样式 */
 .owl{
@@ -60,7 +96,7 @@ body{
     width: 34px;
     height: 34px;
     border-radius: 40px;
-    background-color: #472d20;
+    background-color: #78513A;
     /* 绝对定位 */
     position: absolute;
     left: 12px;
