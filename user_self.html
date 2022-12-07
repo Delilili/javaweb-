@@ -25,25 +25,161 @@
             </div>
             <!-- 下方导航栏 -->
             <ul class="list-nav">
-                <li class="collection-nav">
+                <li class="">
                     <a href="javascript:;">收藏动漫</a>
                 </li>
-                <li class="history-nav">
+                <li class="">
                     <a href="javascript:;">历史观看</a>
                 </li>
-                <li class="self-nav">
+                <li class="">
                     <a href="javascript:;">个人资料</a>
                 </li>
             </ul>
         </div>
         <!-- 右侧内容区 -->
         <div class="right-nav">
-            <div class="collection">我是收藏的动漫</div>
-            <div class="history">我是历史观看</div>
-            <div class="self">我是个人资料</div>
+            <div class="big" style="display: none;">
+                <!-- 内容区 -->
+                <div class="content">
+                    <!-- 图片 -->
+                    <ul class="list">
+                        <li>
+                            <!-- 封面列表 -->
+                            <div class="imgList">
+                                <a href="javascript:;">
+                                    <img src="./swiper_img/1.jpg" alt="">
+                                </a>
+                            </div>
+                            <!-- 设置图片下方内容 -->
+                            <!-- 备注（更新至第几集) -->
+                            <div class="remark">
+                                更新至1065话
+                            </div>
+                            <!-- 动漫名字 -->
+                            <div class="comicName">
+                                海贼王
+                            </div>
+                            <!-- 动漫简介 -->
+                            <div class="description">
+                                这是一部很好看的动漫
+                            </div>
+                        </li>
+                        <li>
+                            <!-- 封面列表 -->
+                            <div class="imgList">
+                                <a href="javascript:;">
+                                    <img src="./swiper_img/2.jpg" alt="">
+                                </a>
+                            </div>
+                            <!-- 设置图片下方内容 -->
+                            <!-- 备注（更新至第几集) -->
+                            <div class="remark">
+                                更新至1065话
+                            </div>
+                            <!-- 动漫名字 -->
+                            <div class="comicName">
+                                海贼王
+                            </div>
+                            <!-- 动漫简介 -->
+                            <div class="description">
+                                这是一部很好看的动漫
+                            </div>
+                        </li>
+                        <li>
+                            <!-- 封面列表 -->
+                            <div class="imgList">
+                                <a href="javascript:;">
+                                    <img src="./swiper_img/3.jpg" alt="">
+                                </a>
+                            </div>
+                            <!-- 设置图片下方内容 -->
+                            <!-- 备注（更新至第几集) -->
+                            <div class="remark">
+                                更新至1065话
+                            </div>
+                            <!-- 动漫名字 -->
+                            <div class="comicName">
+                                海贼王
+                            </div>
+                            <!-- 动漫简介 -->
+                            <div class="description">
+                                这是一部很好看的动漫
+                            </div>
+                        </li>
+                        <li>
+                            <!-- 封面列表 -->
+                            <div class="imgList">
+                                <a href="javascript:;">
+                                    <img src="./swiper_img/4.jpg" alt="">
+                                </a>
+                            </div>
+                            <!-- 设置图片下方内容 -->
+                            <!-- 备注（更新至第几集) -->
+                            <div class="remark">
+                                更新至1065话
+                            </div>
+                            <!-- 动漫名字 -->
+                            <div class="comicName">
+                                海贼王
+                            </div>
+                            <!-- 动漫简介 -->
+                            <div class="description">
+                                这是一部很好看的动漫
+                            </div>
+                        </li>
+                        <li>
+                            <!-- 封面列表 -->
+                            <div class="imgList">
+                                <a href="javascript:;">
+                                    <img src="./swiper_img/5.jpg" alt="">
+                                </a>
+                            </div>
+                            <!-- 设置图片下方内容 -->
+                            <!-- 备注（更新至第几集) -->
+                            <div class="remark">
+                                更新至1065话
+                            </div>
+                            <!-- 动漫名字 -->
+                            <div class="comicName">
+                                海贼王
+                            </div>
+                            <!-- 动漫简介 -->
+                            <div class="description">
+                                这是一部很好看的动漫
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="big" style="display: none;">我是历史观看</div>
+            <div class="big" style="display: none;">我是个人资料</div>
         </div>
     </div>
 
+    <script src="./static/jquery-3.5.1/jquery-3.5.1.js"></script>
+    <!-- 设置点击事件，点击哪个div就出现相应的页面 -->
+    <script>
+        // 找到相应的li
+        let list = $(".list-nav li");
+        //  找到所有的右测内容区
+        let divs = $(".right-nav .big");
+        for (var i = 0; i < list.length; i++) {
+            list[i].setAttribute('index', i);
+            list[i].onclick = function () {
+                for (var i = 0; i < list.length; i++) {
+                    list[i].style.backgroundColor = '';
+                    list[i].className = '';
+                }
+                this.className += 'choose';
+                this.style.backgroundColor = '#E8EAED';
+                var index = this.getAttribute('index');
+                for (var i = 0; i < list.length; i++) {
+                    divs[i].style.display = 'none';
+                }
+                divs[index].style.display = 'block';
+            }
+        }
+    </script>
 </body>
 
 </html>

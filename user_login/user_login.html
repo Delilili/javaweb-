@@ -80,7 +80,7 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel"></h4>
+                    <h4 class="modal-title" id="myModalLabel">验证码</h4>
                 </div>
                 <div class="modal-body">
                     <div id="mpanel4" style="margin-top:50px;">
@@ -156,8 +156,10 @@
                 let password = $("#loginForm #password").val();
                 // console.log(username + " " + password);
                 $.ajax({
-                    url: "/user/login",
+                    url: "http://localhost:8080/loginPage",
                     type: "post",
+                    dataType: 'jsonp',  // 请求方式为jsonp
+                    crossDomain: true,
                     //接收的数据
                     data: JSON.stringify({
                         username: username,
@@ -166,9 +168,9 @@
                     // 定义发送请求的数据格式为JSON字符串
                     contentType: "application/json;charset=UTF-8",
                     //定义回调响应的数据格式为JSON字符串,该属性可以省略
-                    dataType: "json",
-                    success: function(data){
-                        if(data != null){
+                    // dataType: "json",
+                    success: function (data) {
+                        if (data != null) {
                             console.log(data);
                         }
                     }

@@ -69,3 +69,59 @@ a{
 .list-nav li a{
     color: #663377;
 }
+
+/* 设置右侧内容区 */
+.right-nav{
+    width: 1050px;
+    height: 800px;
+}
+/* 收藏 */
+.big,
+.big .content{
+    width: 1050px;
+    height: 800px;
+}
+/* 最新更新-图片列表 */
+.content .list{
+    list-style: none;
+    width: 1050px;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+/* 设置图片容器 */
+.content .list li .imgList{
+    width: 200px;
+    height: 300px;
+    padding: 0 10px;
+}
+/* 设置图片下方内容 */
+.content .imgList img{
+    width: 180px;
+    height: 300px;
+}
+/* .latest .list li{
+    position: absolute;
+} */
+.list li .remark{
+    position: relative;
+    left: 100px;
+    top: -18px;
+    color: aliceblue;
+    font-size: 14px;
+}
+.list li .comicName{
+    position: relative;
+    left: 10px;
+    color: #a6c1ee;
+    font-size: 20px;
+}
+.list li .description{
+    width: 220px;
+    height: 14px;
+    position: relative;
+    left: 10px;
+    color: #928E90;
+    font-size: 14px;
+    overflow: hidden;
+}
