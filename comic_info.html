@@ -4,82 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>动漫详情页</title>
     <link rel="stylesheet" href="./comic_info.css">
 </head>
 <body>
-    <!-- 创建一个大容器 -->
-    <div class="all-wrapper">
-        <!-- 创建一个轮播图 -->
-        <div class="scroll-wrapper">
-            <ul class="scroll-img">
-                <li>
-                    <img src="" alt="轮播图">
-                </li>
-                <li>
-                    <img src="" alt="轮播图">
-                </li>
-                <li>
-                    <img src="" alt="轮播图">
-                </li>
-            </ul>
-        </div>
-        <!-- 创建一个资讯内容容器 -->
-        <div class="info-wrapper">
-            <div class="header">
-                <span>最新动漫资讯</span>
+    <!-- 设置一个大的容器 -->
+    <div class="container">
+        <!-- 上半部分详情 -->
+        <div class="top-bar">
+            <!-- 图片部分 -->
+            <div class="cover">
+                <img src="./swiper_img/1.jpg" alt="封面">
+                <div class="remark">
+                    <span>更新至1045话</span>
+                </div>
             </div>
-            <!-- 创建资讯容器 -->
+            <!-- 详情部分 -->
             <div class="info">
-                <!-- 创建资讯列表 -->
-                <ul class="info-list">
-                    <!-- 创建各个资讯体 -->
-                    <li>
-                        <!-- 资讯体的左侧内容 -->
-                        <div class="left-info">
-                            <!-- 标题 -->
-                            <h4 class="info-title"><a href="javascript:;">我是标题</a></h4>
-                            <!-- 简介 -->
-                            <p class="info-desc">我是简介</p>
-                            <!-- 其他信息 -->
-                            <p class="info-etc">动漫资讯 | 2022-12-31</p>
-                        </div>
-                        <!-- 资讯体的右侧图片 -->
-                        <div class="right-info">
-                            <a href="javascript:;">我是右侧图片</a>
-                        </div>
-                    </li>
-                    <li>
-                        <!-- 资讯体的左侧内容 -->
-                        <div class="left-info">
-                            <!-- 标题 -->
-                            <h4 class="info-title"><a href="javascript:;">我是标题</a></h4>
-                            <!-- 简介 -->
-                            <p class="info-desc">我是简介</p>
-                            <!-- 其他信息 -->
-                            <p class="info-etc">动漫资讯 | 2022-12-31</p>
-                        </div>
-                        <!-- 资讯体的右侧图片 -->
-                        <div class="right-info">
-                            <a href="javascript:;">我是右侧图片</a>
-                        </div>
-                    </li>
-                    <li>
-                        <!-- 资讯体的左侧内容 -->
-                        <div class="left-info">
-                            <!-- 标题 -->
-                            <h4 class="info-title"><a href="javascript:;">我是标题</a></h4>
-                            <!-- 简介 -->
-                            <p class="info-desc">我是简介</p>
-                            <!-- 其他信息 -->
-                            <p class="info-etc">动漫资讯 | 2022-12-31</p>
-                        </div>
-                        <!-- 资讯体的右侧图片 -->
-                        <div class="right-info">
-                            <a href="javascript:;">我是右侧图片</a>
-                        </div>
-                    </li>
-                </ul>
+                <!-- 标题 -->
+                <div class="comicName">
+                    <span>海贼王</span>
+                </div>
+                <!-- 人气 -->
+                <div class="score">
+                    <span>评分：</span>
+                    <span>五星好评</span>
+                </div>
+                <!-- 别名 -->
+                <div class="nickname">
+                    <span>别名：</span>
+                    <span>One Piece</span>
+                </div>
+                <!-- 标签 -->
+                <div class="label">
+                    <span>标签：</span>
+                    <span>热血；搞笑；励志</span>
+                </div>
+                <!-- 地区 -->
+                <div class="region">
+                    <span>地区：</span>
+                    <span>日本</span>
+                </div>
+                <!-- 年份 -->
+                <div class="year">
+                    <span>年份：</span>
+                    <span>1999</span>
+                </div>
+                <!-- 更新 -->
+                <div class="updateTime">
+                    <span>更新：</span>
+                    <span>2022-12-18</span>
+                </div>
+                <!-- 简介 -->
+                <div class="description">
+                    <span>简介：</span>
+                    <span>这是一部很好看的动漫</span>
+                </div>
+                <!-- 立即播放 -->
+                <div class="start">
+                    <button>立即播放</button>
+                </div>
+                <!-- 下载APP -->
+                <div class="download">
+                    <button>下载APP</button>
+                </div>
+            </div>
+        </div>
+        <!-- 下方容器 -->
+        <div class="footer-bar">
+            <!-- 左边评论 -->
+            <div class="left">
+
+            </div>
+            <!-- 右边榜单 -->
+            <div class="right">
+
             </div>
         </div>
     </div>

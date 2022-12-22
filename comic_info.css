@@ -1,76 +1,74 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    background-color: #F8F8F8;
-}
-
-/* 设置大容器 */
-.all-wrapper{
-    width: 600px;
-    background-color: #bfa;
+.container{
+    width: 1000px;
+    
     margin: 100px auto;
 }
-/* 设置轮播图容器 */
-.scroll-wrapper{
-    width: 500px;
-    height: 200px;
-    padding: 20px 50px;
-    background-color: antiquewhite;
+/* 设置上方容器 */
+.top-bar{
+    width: 1000px;
+    background-color: aliceblue;
+    position: absolute;
 }
-.scroll-img{
-    width: 500px;
-    height: 180px;
-    background-color: tomato;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+/* 设置封面 */
+.cover{
+    width: 200px;
+    height: 300px;
+    position: absolute;
 }
-.scroll-img li{
-    width: 150px;
-    height: 180px;
-    background-color: #bfa;
+/* 设置封面图片 */
+.cover img{
+    width: 200px;
+    height: 300px;
+    position: relative;
 }
-.scroll-img li img{
-    width: 150px;
-    height: 180px;
+/* 设置备注 */
+.cover .remark{
+    position: relative;
+    left: 100px;
+    top: -25px;
 }
-
-/* 设置下方资讯内容容器 */
-.info-wrapper{
-    width: 600px;
-    margin-top: 30px;
-    padding: 20px 20px;
+.remark span{
+    color: white;
 }
-.info-wrapper .header{
-    width: 560px;
-    height: 50px;
-    background-color: orange;
+/* 设置右边详情 */
+.top-bar .info{
+    width: 790px;
+    height: 300px;
+    position: relative;
+    left: 210px;
 }
-.header span{
-    line-height: 50px;
+/* 设置名字等标签 */
+.comicName,
+.score,
+.nickname,
+.label,
+.region,
+.year,
+.updateTime,
+.description{
+    margin-bottom: 10px;
 }
-.info-wrapper .header::after{
-    content: " ";
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 1px;
+.comicName span{
+    font-size: 18px;
 }
-
-/* 设置资讯体 */
-.info{
-    width: 560px;
+/* 设置评分等标题*/
+.score span:nth-child(1),
+.nickname span:nth-child(1),
+.label span:nth-child(1),
+.region span:nth-child(1),
+.year span:nth-child(1),
+.updateTime span:nth-child(1),
+.description span:nth-child(1){
+    color: #999999;
 }
-.info .info-list{
-    width: 560px;
+/* 设置下方播放按钮和下载 */
+.start {
+    position: relative;
+    left: 10px;
+    top: 20px;
 }
-.info-list li{
-    display: flex;
-    justify-content: space-between;
-    width: 560px;
-    height: 140px;
+.download{
+    position: relative;
+    left: 100px;
+    top: -4px;
 }
