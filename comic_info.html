@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>动漫详情页</title>
     <link rel="stylesheet" href="./comic_info.css">
 </head>
+
 <body>
     <!-- 设置一个大的容器 -->
     <div class="container">
@@ -74,13 +76,92 @@
         <div class="footer-bar">
             <!-- 左边评论 -->
             <div class="left">
-
+                <!-- 大标题 -->
+                <div class="title">
+                    <span>最新评论</span>
+                </div>
+                <!-- 文本框 -->
+                <textarea name="comment" id="comment" cols="30" rows="10">请输入评论内容</textarea>
+                <!-- 功能框 -->
+                <div class="tool">
+                    <button id="send" type="button">发送评论</button>
+                </div>
+                <!-- 用户评论列表 -->
+                <div class="user">
+                    <div class="userTitle">
+                        <span>用户评论</span>
+                    </div>
+                    <div class="total">
+                        <span>共66条评论</span>
+                    </div>
+                    <div class="userComment">
+                        <div class="comment">
+                            <!-- 头像 -->
+                            <div class="avatar">
+                                <img src="img/logo.png" alt="头像">
+                            </div>
+                            <!-- 名字 -->
+                            <div class="userName">
+                                <span>迷失的🐏</span>
+                            </div>
+                            <!-- 评论时间 -->
+                            <div class="Ctime">
+                                <span>2022-12-18 10:12:30</span>
+                            </div>
+                            <!-- 评论内容 -->
+                            <div class="Ctxt">
+                                <span>这也太好看了吧！</span>
+                            </div>
+                            <!-- 是否回复 -->
+                            <div class="reply">
+                                <span><a href="#">回复</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- 右边榜单 -->
             <div class="right">
-
+                <!-- 大标题 -->
+                <div class="bTitle">
+                    <span>日本热播动漫</span>
+                </div>
+                <!-- 排名 -->
+                <ul class="sort">
+                    <li>
+                        <a href="#">海贼王</a>
+                    </li>
+                    <li>
+                        <a href="#">海贼王</a>
+                    </li>
+                    <li>
+                        <a href="#">海贼王</a>
+                    </li>
+                    <li>
+                        <a href="#">海贼王</a>
+                    </li>
+                    <li>
+                        <a href="#">海贼王</a>
+                    </li>
+                    <li>
+                        <a href="#">海贼王</a>
+                    </li>
+                    <li>
+                        <a href="#">海贼王</a>
+                    </li>
+                    <li>
+                        <a href="#">海贼王</a>
+                    </li>
+                    <li>
+                        <a href="#">海贼王</a>
+                    </li>
+                    <li>
+                        <a href="#">海贼王</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </body>
+
 </html>

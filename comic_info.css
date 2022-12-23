@@ -72,3 +72,152 @@
     left: 100px;
     top: -4px;
 }
+
+/* 设置下方容器 */
+.footer-bar{
+    width: 500px;
+    position: absolute;
+    top: 460px;
+}
+/* 设置评论 */
+.left{
+    width: 500px;
+    position: absolute;
+}
+/* 设置大标题 */
+.left .title{
+    width: 500px;
+    height: 30px;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+}
+.left .title span{
+    line-height: 30px;
+}
+/* 设置文本域 */
+textarea{
+    width: 500px;
+    resize: none;
+}
+/* 设置发送框 */
+.left .tool{
+    position: relative;
+    left: 430px;
+}
+#send{
+    background-color: aquamarine;
+}
+/* 设置用户评论 */
+.left .user{
+    width: 500px;
+    position: absolute;
+}
+.user .userTitle{
+    width: 250px;
+    height: 30px;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+}
+.user .userTitle span{
+    line-height: 30px;
+}
+/* 设置评论总数 */
+.user .total{
+    width: 250px;
+    height: 30px;
+    background-color: aliceblue;
+    position: relative;
+    top: -50px;
+    left: 250px;
+}
+.user .total span{
+    line-height: 30px;
+}
+/* 设置评论列表 */
+.user .userComment{
+    list-style: none;
+    width: 450px;
+    height: 600px;
+    position: absolute;
+}
+.userComment .comment{
+    width: 450px;
+    height: 120px;
+    background-color: aquamarine;
+}
+/* 设置头像 */
+.comment .avatar{
+    width: 80px;
+    height: 120px;
+    border-radius: 50%;
+}
+.avatar img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+/* 设置名字 */
+.comment .userName{
+    position: relative;
+    top: -100px;
+    left: 100px;
+    width: 100px;
+    height: 30px;
+    background-color: bisque;
+}
+.comment .userName span{
+    color: black;
+    font-weight: bold;
+}
+/* 设置时间 */
+.comment .Ctime{
+    position: relative;
+    top: -130px;
+    left: 290px;
+    width: 160px;
+    height: 30px;
+    background-color: bisque;
+}
+.comment .Ctime span{
+    color: #999999;
+}
+/* 设置内容 */
+.comment .Ctxt{
+    position: relative;
+    top: -120px;
+    left: 100px;
+    width: 350px;
+}
+/* 设置回复 */
+.comment .reply{
+    position: relative;
+    top: -120px;
+    left: 400px;
+    width: 35px;
+}
+
+/* 设置榜单容器 */
+.right{
+    position: absolute;
+    width: 200px;
+    left: 700px;
+}
+/* 设置榜单标题 */
+.right .bTitle{
+    width: 200px;
+    height: 30px;
+    background-color: aliceblue;
+}
+.right .bTitle span{
+    font-size: 25px;
+    line-height: 30px;
+}
+/* 设置排名 */
+.right .sort{
+    list-style: none;
+}
+.sort li a{
+    text-decoration: none;
+    color: #999999;
+    font-size: 20px;
+}
