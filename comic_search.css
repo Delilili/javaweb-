@@ -1,0 +1,63 @@
+.container{
+    width: 1200px;
+    margin: 100px auto;
+}
+/* 设置标题 */
+.title{
+    font-size: 20px;
+    color: red;
+}
+.search{
+    width: 1200px;
+    height: 420px;
+    background-color: #a6c1ee;
+}
+.search .slide{
+    position: absolute;
+}
+.slide img{
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+/* 设置轮播图下方的文字信息 */
+.slide .remark{
+    position: relative;
+    left: 100px;
+    top: -20px;
+    color: aliceblue;
+    font-size: 14px;
+}
+.slide .comicName{
+    height: 30px;
+    width: 200px;
+    position: relative;
+    top: 10px;
+    color: #FFFFF2;
+    font-size: 20px;
+}
+.slide .description{
+    height: 30px;
+    width: 200px;
+    position: relative;
+    top: 20px;
+    color: #928E90;
+    font-size: 14px;
+    overflow: hidden;
+}
+.riben{
+    width: 1200px;
+    height: 420px;
+    background-color: #dd86bc;
+}
+.riben .slide{
+    position: absolute;
+}
+.guo{
+    width: 1200px;
+    height: 420px;
+    background-color: #a6c1ee;
+}
+.guo .slide{
+    position: absolute;
+}
